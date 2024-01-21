@@ -75,8 +75,9 @@ const Password = () => {
 };
 
 return (
+  <div>
   <div className="max-w-md mx-auto my-10 p-6 bg-white rounded-md shadow-md">
-    <h1 className="text-2xl font-bold mb-4 text-center">S'inscrire</h1>
+    <h1 className="text-2xl font-bold mb-4 text-center">Incription</h1>
 
     <form onSubmit={createUser}>
       <div className="mb-4">
@@ -104,7 +105,7 @@ return (
       </div>
 
       <button type="submit" className="bg-blue-500 w-full text-white py-2 px-4 rounded-md">
-        S'inscrire
+        Sinscrire
       </button>
     </form>
     <hr className="my-6" />
@@ -121,7 +122,8 @@ return (
       </button>
       </div>
   </div>
-);
+  </div>
+  );
 };
 
 export default Password;
