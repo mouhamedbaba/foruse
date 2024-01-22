@@ -4,6 +4,8 @@ import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, Gi
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Seo } from "@/ui/components/seo/seo";
+import { Typography } from "@/ui/design-system/typography/typography";
 interface Props {
   email: string;
   password: string;
@@ -76,6 +78,7 @@ const Password = () => {
 
 return (
   <div>
+    <Seo title="Accueil" description="page d'accueil" />
   <div className="max-w-md mx-auto my-10 p-6 bg-white rounded-md shadow-md">
     <h1 className="text-2xl font-bold mb-4 text-center">Incription</h1>
 
@@ -104,7 +107,7 @@ return (
         />
       </div>
 
-      <button type="submit" className="bg-blue-500 w-full text-white py-2 px-4 rounded-md">
+      <button type="submit" className="bg-blue-500 w-full text-white py-2 px-4 rounded-md  hover:bg-blue-600">
         Sinscrire
       </button>
     </form>
@@ -122,6 +125,11 @@ return (
       </button>
       </div>
   </div>
+
+  <h1>Lamo</h1>
+
+  <Typography component="h1" variant="h1">Inscriptiom</Typography>
+
   </div>
   );
 };
