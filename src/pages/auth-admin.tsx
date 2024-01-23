@@ -31,7 +31,7 @@ const AuthAdmin = () => {
                     variant="h3"
                     weight="bold"
                     theme="primary"
-                    className="italic"
+                    className="   "
                   >
                     FORUSE
                   </Typography>
@@ -43,11 +43,9 @@ const AuthAdmin = () => {
                 <input
                   type="text"
                   placeholder="search.."
-                  className="bg-transparent before:m font-normal border border-slate-500 rounded-full  px-4 focus:outline-none focus:border-blue-500 w-6/12"
+                  className="bg-transparent  font-normal border border-slate-500 rounded-lg  px-4 focus:outline-none focus:border-primary w-6/12"
                 />
                 <div className="w-6/12 flex justify-end">
-                  
-
                   <div className="avatar avatar-xl bg-white h-10 w-10  rounded-full">
                     {/* <Image className="absolute rounded-full" width={"48"} height={"48"} src="/assets/img/avatar.jpg" alt=""  />
                      */}
@@ -64,61 +62,58 @@ const AuthAdmin = () => {
         </div>
         <div className="lg:flex lg:gap-4">
           <div className="w-3/12 hidden lg:block pb-28  rounded-md h-screen">
-            <div className="bg-slate-700 rounded-md py-3 px-2 h-full overflow-y-auto overflow-x-hidden shadow-2xl">
-              
-            </div>
+            <div className="bg-slate-700 rounded-md py-3 px-2 h-full overflow-y-auto overflow-x-hidden shadow-2xl"></div>
           </div>
-          <div className="w-full lg:w-9/12 max-h-screen pb-28 overflow-y-auto   overflow-x-hidden pr-1">
-            <div className=" mx-auto mt-3 rounded-md shadow-md bg-slate-800 text-white-100">
-              <div className="header items-center flex flex-row px-2 py-4 gap-2">
-              <input
+          <div className="w-full lg:w-9/12 max-h-screen pb-28 overflow-y-auto overflow-x-hidden pr-1">
+            <div className="mx-auto rounded-md shadow-md bg-slate-800 text-white-100">
+              <div className="header flex flex-row items-center px-5 py-4 gap-2">
+                <input
                   type="text"
-                  placeholder="search.."
-                  className="bg-transparent before:m font-normal h-14 border border-slate-500 rounded-lg  px-4 focus:outline-none focus:border-blue-500 w-10/12"
+                  placeholder="Rechercher.."
+                  className="bg-transparent before:m font-normal h-14 border border-slate-500 rounded-lg px-4 focus:outline-none focus:border-primary w-10/12"
                 />
                 <div className="flex flex-row items-center gap-2">
-                <div className=" flex justify-center">
-              <Button size="md">Add</Button>
-
+                  <div className="flex justify-center">
+                    <Button size="md">Ajouter</Button>
+                  </div>
+                  <div className="flex justify-center h-8 w-8 fas fa-rotate-right"></div>
+                  <div className="flex justify-end">
+                    <span className="fas fa-ellipsis-v h-8 w-8"></span>
+                  </div>
                 </div>
-                <div className="flex justify-center h-8 w-8 fas fa-rotate-right">
-                </div>
-                <div className=" flex justify-end">
-                <span className="fas fa-ellipsis-v h-8 w-8 " ></span>
-
-                </div>
-                </div>
-
               </div>
-              <div className="w-full">
-                <table className="min-w-full p-6">
+              <div className="w-full mx-auto ">
+                <table className="min-w-full p-6 table-auto">
                   <thead>
-                    <tr className=" border-b">
-                      <th className="py-2 text-start">Identifier</th>
-                      <th className="py-2 text-start ">Providers</th>
-                      <th className="py-2 text-start ">Created</th>
-                      <th className="py-2 text-start ">Signed In</th>
-                      <th className="py-2 text-start ">User</th> 
+                    <tr className="border-b p-3">
+                      <th className="p-5 text-start">Identifiant</th>
+                      <th className="p-5 text-start">Fournisseurs</th>
+                      <th className="p-5 text-start">Créé</th>
+                      <th className="p-5 text-start">Connecté</th>
+                      <th className="p-5 text-start">Utilisateur</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td className="py-2 border-b">John Doe</td>
-                      <td className="py-2 border-b">25</td>
-                      <td className="py-2 border-b">Paris</td>
-                      <td className="py-2 border-b">25</td>
-                      <td className="py-2 border-b">Paris</td>
+                    <tr className="bg-slate-900 hover:bg-slate-800 cursor-pointer">
+                      <td className="p-5 border-b">John Doe</td>
+                      <td className="p-5 border-b">25</td>
+                      <td className="p-5 border-b">Paris</td>
+                      <td className="p-5 border-b">25</td>
+                      <td className="p-5 border-b">Paris</td>
                     </tr>
-                    <tr>
-                      <td className="py-2 border-b">Jane Doe</td>
-                      <td className="py-2 border-b">30</td>
-                      <td className="py-2 border-b">Lyon</td>
-                      <td className="py-2 border-b">25</td>
-                      <td className="py-2 border-b">Paris</td>
+                    <tr className="bg-slate-900 hover:bg-slate-800 cursor-pointer">
+                      <td className="p-5 border-b">Jane Doe</td>
+                      <td className="p-5 border-b">30</td>
+                      <td className="p-5 border-b">Lyon</td>
+                      <td className="p-5 border-b">25</td>
+                      <td className="p-5 border-b">Paris</td>
                     </tr>
                     {/* Ajoutez autant de lignes que nécessaire */}
                   </tbody>
                 </table>
+              </div>
+              <div className="header flex flex-row items-center px-5 py-4 gap-2">
+                
               </div>
             </div>
           </div>
