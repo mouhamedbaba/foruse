@@ -46,10 +46,7 @@ const AuthAdmin = () => {
                   className="bg-transparent before:m font-normal border border-slate-500 rounded-full  px-4 focus:outline-none focus:border-blue-500 w-6/12"
                 />
                 <div className="w-6/12 flex justify-end">
-                  <FontAwesomeIcon
-                    icon={faBuysellads}
-                    className="h-10 w-10 cursor-pointer hover:bg-red-800"
-                  />
+                  
 
                   <div className="avatar avatar-xl bg-white h-10 w-10  rounded-full">
                     {/* <Image className="absolute rounded-full" width={"48"} height={"48"} src="/assets/img/avatar.jpg" alt=""  />
