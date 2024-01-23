@@ -10,6 +10,8 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "corner-red" : "/assets/img/spot-illustrations/corner-1.png"
+
       },
       colors :{
         white:{
