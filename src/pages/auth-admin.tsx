@@ -13,9 +13,9 @@ const AuthAdmin = () => {
   return (
     <div className="h-screen">
       <Seo title="Auth" description="page de gestion d'auth" />
-      <div className="bg-slate-900 px-2 container mx-auto   lg:px-24">
-        <div className="w-full min-h-16 bg-slate-900 ">
-          <div className="flex gap-5 py-5 text-gray-400 font-bold">
+      <div className="px-2 container mx-auto   lg:px-24">
+        <div className="w-full min-h-16 dark:bg-slate-900 ">
+          <div className="flex gap-5 py-5 dark:text-gray-400 font-bold">
             <div className="w-3/12 ">
               <div className="flex justify-between">
                 <button className="mr-2  w-8 h-8 c">
@@ -40,12 +40,14 @@ const AuthAdmin = () => {
             </div>
             <div className="w-9/12  h-full">
               <div className="flex justify-between">
+
                 <input
                   type="text"
                   placeholder="search.."
-                  className="bg-transparent  font-normal border border-slate-500 rounded-lg  px-4 focus:outline-none focus:border-primary w-6/12"
+                  className="bg-transparent   font-normal border border-slate-500 rounded-lg  px-4 focus:outline-none focus:border-primary w-6/12 "
                 />
-                <div className="w-6/12 flex justify-end">
+                <div className="w-6/12 flex justify-end gap-2 items-center">
+            
                   <div className="avatar avatar-xl bg-white h-10 w-10  rounded-full">
                     {/* <Image className="absolute rounded-full" width={"48"} height={"48"} src="/assets/img/avatar.jpg" alt=""  />
                      */}
@@ -62,10 +64,10 @@ const AuthAdmin = () => {
         </div>
         <div className="lg:flex lg:gap-4">
           <div className="w-3/12 hidden lg:block pb-28  rounded-md h-screen">
-            <div className="bg-slate-700 rounded-md py-3 px-2 h-full overflow-y-auto overflow-x-hidden shadow-2xl"></div>
+            <div className="bg-transparent dark:bg-slate-700 rounded-md py-3 px-2 h-full overflow-y-auto overflow-x-hidden dark:shadow-2xl"></div>
           </div>
           <div className="w-full lg:w-9/12 max-h-screen pb-28 overflow-y-auto overflow-x-hidden pr-1">
-            <div className="mx-auto rounded-md shadow-md bg-slate-800 text-white-100">
+            <div className="mx-auto bg-white rounded-md shadow-md dark:bg-slate-800 dark:text-white-100">
               <div className="header flex flex-row items-center px-5 py-4 gap-2">
                 <input
                   type="text"
@@ -94,14 +96,14 @@ const AuthAdmin = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="bg-slate-900 hover:bg-slate-800 cursor-pointer">
+                    <tr className="bg-slate-100 dark:bg-slate-900 hover:bg-white dark:hover:bg-slate-800 cursor-pointer transition duration-300">
                       <td className="p-5 border-b">John Doe</td>
                       <td className="p-5 border-b">25</td>
                       <td className="p-5 border-b">Paris</td>
                       <td className="p-5 border-b">25</td>
                       <td className="p-5 border-b">Paris</td>
                     </tr>
-                    <tr className="bg-slate-900 hover:bg-slate-800 cursor-pointer">
+                    <tr className="bg-slate-100 dark:bg-slate-900 hover:bg-white dark:hover:bg-slate-800 cursor-pointer transition duration-300">
                       <td className="p-5 border-b">Jane Doe</td>
                       <td className="p-5 border-b">30</td>
                       <td className="p-5 border-b">Lyon</td>
