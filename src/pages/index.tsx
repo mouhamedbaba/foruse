@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { auth, provider, githubProvider } from "@/config/firebase-config";
+import { auth, provider, githubProvider, db } from "@/config/firebase-config";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { doc, setDoc } from "firebase/firestore";
+import { Link } from "react-router-dom";
+import { useRouter } from 'next/navigation'
 import {
   createUserWithEmailAndPassword,
   signInWithPopup,
@@ -19,19 +23,26 @@ interface Props {
 const Password = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const router = useRouter()
   const createUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      // Enregistrement réussi
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      await setDoc(doc(db, "users", res.user.uid), {
+        uid:res.user.uid,
+        email : email,
+      });
+      await setDoc(doc(db, "userChats", res.user.uid), {});
+      router.push('/chat', { scroll: false })
     } catch (error: any) {
       const errorCode = error.code;
       const errorMessage = error.message;
       // Gestion des erreurs
     }
   };
+
+
 
   const GoogleSign = async () => {
     await signInWithPopup(auth, provider)
